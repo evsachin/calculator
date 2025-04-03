@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+.btn {
+  @apply bg-gray-600 hover:bg-gray-500 text-white text-2xl p-4 rounded;
+}
