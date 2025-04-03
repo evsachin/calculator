@@ -21,36 +21,41 @@ export default function Calculator() {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-900">
-      <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-white">
-        <div className="mb-4 text-right text-2xl bg-gray-700 p-4 rounded">
+      <div className="bg-gray-800 p-6 rounded-lg shadow-xl text-white w-80">
+        <div className="mb-4 text-right text-3xl bg-gray-700 p-4 rounded-lg font-mono">
           {input || "0"}
         </div>
-        <div className="grid grid-cols-4 gap-2">
-          {["7", "8", "9", "/"].map((btn) => (
-            <button key={btn} className="btn" onClick={() => handleClick(btn)}>
-              {btn}
-            </button>
-          ))}
-          {["4", "5", "6", "*"].map((btn) => (
-            <button key={btn} className="btn" onClick={() => handleClick(btn)}>
-              {btn}
-            </button>
-          ))}
-          {["1", "2", "3", "-"].map((btn) => (
-            <button key={btn} className="btn" onClick={() => handleClick(btn)}>
-              {btn}
-            </button>
-          ))}
-          {["0", ".", "=", "+"].map((btn) => (
+        <div className="grid grid-cols-4 gap-3">
+          {[
+            "7",
+            "8",
+            "9",
+            "/",
+            "4",
+            "5",
+            "6",
+            "*",
+            "1",
+            "2",
+            "3",
+            "-",
+            "0",
+            ".",
+            "=",
+            "+",
+          ].map((btn) => (
             <button
               key={btn}
-              className="btn"
+              className="p-4 text-xl bg-gray-600 rounded-lg hover:bg-gray-500 transition"
               onClick={btn === "=" ? calculateResult : () => handleClick(btn)}
             >
               {btn}
             </button>
           ))}
-          <button className="btn col-span-2 bg-red-500" onClick={clearInput}>
+          <button
+            className="p-4 text-xl col-span-4 bg-red-500 rounded-lg hover:bg-red-400 transition"
+            onClick={clearInput}
+          >
             C
           </button>
         </div>
