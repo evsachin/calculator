@@ -20,7 +20,8 @@ export default function Calculator() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-900">
+    <div className="flex flex-col  justify-center items-center h-screen bg-gray-900">
+      <p className="text-white text-4xl p-3 font-bold">Calculator</p>
       <div className="bg-gray-800 p-6 rounded-lg shadow-xl text-white w-80">
         <div className="mb-4 text-right text-3xl bg-gray-700 p-4 rounded-lg font-mono">
           {input || "0"}
@@ -33,22 +34,10 @@ export default function Calculator() {
             C
           </button>
           {[
-            "7",
-            "8",
-            "9",
-            "/",
-            "4",
-            "5",
-            "6",
-            "*",
-            "1",
-            "2",
-            "3",
-            "-",
-            "0",
-            ".",
-            "+",
-            "=",
+            "7","8","9","/",
+            "4","5","6","*",
+            "1","2","3","-",
+            "0",".","+","=",
           ].map((btn) => (
             <button
               key={btn}
