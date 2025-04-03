@@ -22,7 +22,7 @@ export default function Calculator() {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-gray-900 p-4">
-      <p className="text-white text-4xl p-3 font-bold">Calculator</p>
+      <p className="text-white text-4xl pb-12 font-bold">Calculator</p>
       <div className="bg-gray-800 p-6 rounded-lg shadow-xl text-white w-full max-w-xs">
         <div className="mb-4 text-right text-3xl bg-gray-700 p-4 rounded-lg font-mono overflow-x-auto whitespace-nowrap min-h-[3rem]">
           {input || "0"}
