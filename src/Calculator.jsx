@@ -26,6 +26,12 @@ export default function Calculator() {
           {input || "0"}
         </div>
         <div className="grid grid-cols-4 gap-3">
+          <button
+            className="p-4 text-xl col-span-4 bg-red-500 rounded-lg hover:bg-red-400 transition"
+            onClick={clearInput}
+          >
+            C
+          </button>
           {[
             "7",
             "8",
@@ -41,8 +47,8 @@ export default function Calculator() {
             "-",
             "0",
             ".",
-            "=",
             "+",
+            "=",
           ].map((btn) => (
             <button
               key={btn}
@@ -52,12 +58,6 @@ export default function Calculator() {
               {btn}
             </button>
           ))}
-          <button
-            className="p-4 text-xl col-span-4 bg-red-500 rounded-lg hover:bg-red-400 transition"
-            onClick={clearInput}
-          >
-            C
-          </button>
         </div>
       </div>
     </div>
